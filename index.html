@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AlgoLens</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="text-white">
+
+  <header class="text-center py-3" style="background-color: #1f1b24;">
+    <h1 class="fw-bold text-info" style="text-decoration: underline;">AlgoLens</h1>
+  </header>
+
+  <div class="container my-4">
+    <div id="instruction-area" class="alert alert-primary text-center mb-3 rounded shadow">
+      <strong>Goal:</strong> These bars should be sorted in increasing order. Select an algorithm and watch the process!
+    </div>
+    <nav class="row g-3 align-items-center mb-3">
+      <div class="col-md-3 text-center mb-2 mb-md-0">
+        <button type="button" class="btn btn-outline-light newArray shadow">Generate New Array</button>
+      </div>
+      <div class="col-md-5 d-flex justify-content-around flex-wrap">
+        <div>
+          <label for="arr_sz" class="form-label">Size</label>
+          <input id="arr_sz" type="range" min="5" max="100" step="1" value="60" class="form-range" />
+        </div>
+        <div>
+          <label for="speed_input" class="form-label">Speed</label>
+          <input id="speed_input" type="range" min="20" max="300" step="10" value="60" class="form-range" />
+        </div>
+      </div>
+      <div class="col-md-4 d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-outline-info selectionSort shadow">Selection</button>
+        <button class="btn btn-outline-info bubbleSort shadow">Bubble</button>
+        <button class="btn btn-outline-info insertionSort shadow">Insertion</button>
+        <button class="btn btn-outline-info quickSort shadow">Quick</button>
+        <button class="btn btn-outline-info mergeSort shadow">Merge</button>
+        <button class="btn btn-warning pauseSort shadow" id="pauseSortBtn">Pause</button>
+      </div>
+    </nav>
+    <div id="bars" class="flex-container container rounded-3 p-3 shadow-lg bg-dark"></div>
+    <!-- Courtesy Footer -->
+    <footer class="text-center mt-5 mb-3 text-muted" style="font-size: 1.05rem;">
+      <hr style="background: #44475a; height: 2px; border: none; margin: 2rem 0 1rem 0;" />
+      <div>
+        <span>AlgoLens &copy; 2025 &mdash; Developed by <strong>Vishnu</strong>.</span><br/>
+        <span>For feedback or collaboration, please get in touch.</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="sorting_algorithms_js/sorting.js"></script>
+  <script src="sorting_algorithms_js/bubble_sort.js"></script>
+  <script src="sorting_algorithms_js/insertion_sort.js"></script>
+  <script src="sorting_algorithms_js/merge_sort.js"></script>
+  <script src="sorting_algorithms_js/quick_sort.js"></script>
+  <script src="sorting_algorithms_js/selection_sort.js"></script>
+</body>
+</html>

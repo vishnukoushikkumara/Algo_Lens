@@ -1,0 +1,119 @@
+body {
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  background: linear-gradient(135deg, #282a36 0%, #44475a 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+header {
+  background: #282a36;
+  box-shadow: 0 2px 8px rgba(40,42,54,0.5);
+}
+
+#instruction-area {
+  font-size: 1.15rem;
+  background: #44475a;
+  color: #f8f8f2;
+  border: none;
+}
+
+#timing-area {
+  background: #6272a4;
+  color: #f8f8f2;
+  border: none;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 600px;
+  margin: 40px auto 0 auto;
+  gap: 4px;
+  padding: 0 10px;
+  background: #282a36;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(40,42,54,0.5);
+  overflow: hidden;
+}
+
+.flex-item, .bar {
+  background: linear-gradient(180deg, #00e6e6 0%, #00b8d9 100%);
+  border: none;
+  width: 18px;
+  transition: height 0.1s ease, background 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40,42,54,0.15);
+}
+
+.bar.selected {
+  background: #ffb86c !important;
+}
+
+.bar.compared {
+  background: #ff5555 !important;
+}
+
+.bar.sorted {
+  background: #50fa7b !important;
+}
+
+button, .btn {
+  font-weight: bold;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(40,42,54,0.12);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  background: #44475a;
+  color: #f8f8f2;
+  border: 2px solid #6272a4;
+}
+
+button:active, .btn:active {
+  transform: scale(0.97);
+  background: #bd93f9;
+  color: #282a36;
+}
+
+button.selected, .btn.selected {
+  background: #bd93f9 !important;
+  color: #282a36 !important;
+  border-color: #ff79c6 !important;
+  box-shadow: 0 0 0 3px #ff79c6aa;
+}
+
+#pauseSortBtn {
+  min-width: 90px;
+  font-weight: bold;
+  background: #ffb86c;
+  color: #282a36;
+  border: 2px solid #ffb86c;
+}
+
+#pauseSortBtn.paused {
+  background: #50fa7b;
+  color: #282a36;
+  border-color: #50fa7b;
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    height: 300px;
+    gap: 2px;
+  }
+  .flex-item, .bar {
+    width: 8px;
+  }
+}
+
+.row {
+  margin: 0;
+}
+
+#input {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
